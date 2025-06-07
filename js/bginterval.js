@@ -1,10 +1,10 @@
 const backgrounds = [
-  'url("./curr_bg/bg2.jpg")', 
-  'url("./curr_bg/bg3.jpg")',  
-  'url("./curr_bg/bg4.jpg")',  
-  'url("./curr_bg/bg5.png")',   
-  'url("./curr_bg/bg6.png")',  
-  'url("./curr_bg/bg7.png")',
+  'url("/curr_bg/bg2.jpg")', 
+  'url("/curr_bg/bg3.jpg")',  
+  'url("/curr_bg/bg4.jpg")',  
+  'url("/curr_bg/bg5.png")',   
+  'url("/curr_bg/bg6.png")',  
+  'url("/curr_bg/bg7.png")',
 ];
 
 const backgroundsDescription = [
