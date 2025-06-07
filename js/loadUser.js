@@ -3,6 +3,10 @@ import {loadUserDetails} from './script.js';
 function startLoadDetails() {
   // Store userDetails into a variable to be used in this script
   const storedUserDetails = loadUserDetails();
+  if (!storedUserDetails) {
+    console.warn('No user details found. Skipping load.');
+    return;
+  }
   console.log(loadUserDetails());
 
   // Loads all the user details.
