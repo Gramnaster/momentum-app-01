@@ -29,6 +29,6 @@ function startLoadDetails() {
 document.addEventListener('mainPageLoaded', startLoadDetails);
 
 // This code runs after loadMainPage() completes and DOM Content Resets
-document.addEventListener('DOMContentLoaded', startLoadDetails);
+// document.addEventListener('DOMContentLoaded', startLoadDetails);
 
 
