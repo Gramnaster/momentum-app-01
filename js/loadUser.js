@@ -1,4 +1,4 @@
-import {loadUserDetails} from './script.js';
+import {loadUserDetails} from './js/script.js';
 
 function startLoadDetails() {
   // Store userDetails into a variable to be used in this script
