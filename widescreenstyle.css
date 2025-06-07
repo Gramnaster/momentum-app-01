@@ -1,0 +1,1038 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  background-color: hsla(0, 0, 5%, 100%);
+}
+
+body, html {
+  background-color: hsla(0, 0, 5%, 100%);
+  margin: 0;
+  padding: 0;
+  height: 100%;height: 100%;
+  width: 100%;
+  /* display: flex;
+  flex-direction: row; */
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  aspect-ratio: 16/9;
+}
+
+/* Generic font inheritance */
+input, button, textarea, select {
+    font-family: inherit;
+}
+
+#intro-page {
+  background-image: url("./curr_bg/bg1.png");
+  /* background-color: hsla(0, 0, 5%, 100%); */
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100vw;
+  /* width: 100%;
+  height: 100%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+#header-container {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2.75rem;
+}
+
+#header-container h1 {
+  color: hsla(0, 0, 50%, 100%);
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+
+#intro-page-container {
+  min-height: 80vh;
+  min-height: 80dvh;
+  height: 80%;
+  width: 100vw;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#intro-form-section {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  /* background-color: hsla(60, 100%, 50%, 10%); */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* width: 100%;
+  height: 100%; */
+  padding: 35px 20px 20px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#intro-time-section{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  /* background-color: hsl(0, 100%, 50%, 10%); */
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+
+#intro-author-section{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  /* background-color: hsl(0, 100%, 50%, 10%); */
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 40px;
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+
+/* Intro Time Section's Children */
+#intro-day-date {
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: white;
+  margin: 0 0 0 0px;
+  padding: 0;
+}
+
+#intro-time-display {
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+#intro-location {
+  font-size: 0.75rem;
+  font-weight: 100;
+  margin: 4px 0 0 4px;
+  padding: 0;
+}
+
+/* Intro Form Section's Children */
+#intro-form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+#intro-form input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.25rem;
+    padding: 5px 5px;
+    margin-bottom: 30px;
+    width: 20vw; 
+    width: 20dvw;
+    /* max-width: 300px; */
+    text-align: center;
+    outline: none;
+    font-family: inherit;
+    font-weight: 300;
+    /* font-style: italic; */
+}
+
+#intro-form ::placeholder {
+  font-style: italic;
+  font-weight: 300;
+}
+
+#intro-form input[type="text"]:-webkit-autofill,
+#intro-form input[type="text"]:-webkit-autofill:hover,
+#intro-form input[type="text"]:-webkit-autofill:focus,
+#intro-form input[type="text"]:-webkit-autofill:active {
+  -webkit-text-fill-color: #e0e0e0 !important;
+  background: transparent;
+  box-shadow: 0 0 0 1000px hsla(0, 0%, 5%, 1%) inset !important;
+  font-size: 1.25rem; 
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#intro-button-container {
+  display: flex;
+  /* justify-content: flex-start; */
+  padding-right: 1rem;
+  gap: 1rem;
+}
+
+#continue-button {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1rem;
+  cursor: pointer;
+  /* padding: 10px; */
+  font-family: inherit;
+  font-weight: 300;
+  /* text-align: center; */
+  display: inline-flex;
+  align-items: center;
+  text-align: top;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 10px 15px;
+  border-radius: 2rem;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#continue-button:hover,
+#continue-button:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 5px rgba(224, 224, 224, 0.3); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#continue-icon{
+    /* display: inline-block; */
+    /* margin-left: 8px; */
+    /* font-size: 1.1em; */
+    /* align-self: flex-end; */
+    padding: 0.1rem 0 0 0;
+    height: 1rem;
+    width: auto;
+    vertical-align: middle;
+}
+
+#bypass-button {
+    background: transparent;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    cursor: pointer;
+    /* padding: 10px; */
+    font-family: inherit;
+    font-weight: 300;
+    /* text-align: center; */
+    display: inline-flex;
+    align-items: center;
+    text-align: top;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 10px 15px;
+    border-radius: 2rem;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#bypass-button:hover,
+#bypass-button:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 5px rgba(224, 224, 224, 0.3); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#login-icon{
+    /* display: inline-block; */
+    /* margin-left: 8px; */
+    /* font-size: 1.1em; */
+    /* align-self: flex-end; */
+    padding: 0.1rem 0 0 0;
+    height: 1.1rem;
+    width: auto;
+    vertical-align: middle;
+}
+
+
+/* Intro Author Section's Children */
+#intro-author {
+  font-size: 1rem;
+  font-weight: 100;
+  text-align: right;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Page Transition CSS */
+.d-none {
+  display: none !important;
+}
+
+#intro-page,
+#main-page {
+  transition: opacity 1s ease-in-out;
+}
+
+
+.page-active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.page-hidden {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Main Page CSS goes here */
+#main-page {
+  background-image: url("./curr_bg/bg5.png");
+  background-color: rgb(0, 0, 0);
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100vw;
+  /* width: 100%;
+  height: 100%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+
+/* Main Header title section */
+#main-header-container {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2.75rem;
+}
+
+#title-card {
+  color: hsla(0, 0, 50%, 100%);
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+
+/* Main Container of the rest of the section */
+#main-page-container {
+  min-height: 80vh;
+  min-height: 80dvh;
+  height: 80vh;
+  height: 80dvh;
+  width: 100vw;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#main-greeting-quote-section {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  /* background-color: hsla(60, 100%, 50%, 10%); */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* width: 100%;
+  height: 100%; */
+  padding: 50px 20px 45px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#main-time-section{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  /* background-color: hsl(0, 100%, 50%, 10%); */
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 40px 40px 0 80px;
+  padding-left: 80px;
+  box-sizing: border-box;
+  /* max-width: 28.6%; */
+  height: 100%;
+  min-height: 100%;
+}
+
+#main-focus-todo-section{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  /* background-color: hsl(0, 100%, 50%, 10%); */
+  /* justify-content: center; */
+  /* align-items: flex-start; */
+  text-align: center;
+  padding: 40px 80px 0 40px;
+  /* padding-right: 80px; */
+  box-sizing: border-box;
+  /* align-items: flex-end; */
+  /* height: 100%;
+  margin-bottom: auto; */
+}
+
+/* Main Time Section's Children */
+#main-day-date {
+  font-size: 1.75rem;
+  font-weight: 200;
+  color: white;
+  margin: 0 0 0 0px;
+  padding: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+#main-time-display {
+  font-size: 6rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color:#d3152b;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+}
+
+#main-location {
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 4px 0 0 4px;
+  padding: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+/* Main BG Container's Children */
+#main-bg-container {
+  background-color: hsla(0, 0%, 10%, 50%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  margin-top: auto; /* Puts it at the bottom of the container */
+  width: 100%;
+  max-width: 20dvw;
+  padding: 0 1rem 0 1rem;
+  text-align: center;
+}
+
+#main-back-bg-button,
+#main-fwd-bg-button {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  /* font-size: 1.25rem; */
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* height: 2rem; */
+  /* width: auto; */
+  justify-items: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#back-icon, 
+#fwd-icon {
+  height: 1.1rem;
+  width: auto;
+}
+
+#fwd-icon {
+    height: 1.5rem;
+    width: auto;
+}
+
+#main-bg-text {
+  font-weight: 300;
+}
+
+/* Main Greeting Section's Children */
+#main-greeting-name-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 4rem;
+  justify-content: center;
+  align-self: center;
+}
+
+#main-greeting {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+}
+
+#main-name {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 0 4rem 0;
+  color: #d3152b;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25)
+}
+
+/* Main Quote Section's Children */
+#main-quote-container {
+  display: inherit;
+  align-content: Center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  max-width: 60ch;
+
+  /* transition: 0.25s ease-in-out; */
+}
+
+#main-quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+#main-author {
+  font-size: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+#main-quote,
+#main-author {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.fade-quote {
+  opacity: 0;
+}
+
+#main-quote-button-container {
+  display: inline-flex;
+  padding: 0.75rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center
+}
+
+#randomise-quotes-button,
+#add-quotes-button,
+#minus-quotes-button {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  height: 1.25rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  /* gap: 1rem; */
+}
+
+#randomise-quotes-icon {
+  height: 1.1rem;
+}
+
+#add-quotes-icon {
+  height: 1.25rem;
+}
+
+#minus-quotes-icon {
+  /* height: 1.1rem;
+  width: auto; */
+  opacity: 0.5;
+}
+
+/* Hidden form until add-quotes is selected */
+#main-quote-author-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the editable input box */
+.quote-author-input {
+  display: inline-block;
+  width: 100%;
+  max-width: 60ch;
+  min-height: 1.25rem;
+  margin-left: 0.25rem;
+  padding: 0 0.5rem 0.rem 0.5rem;
+  border-radius: 4px;
+  line-height: 1.4;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  cursor: text;
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+
+.quote-author-input:focus {
+  outline: none;
+  border: 1px solid white;
+  padding-top: 0.25rem;
+}
+
+.quote-author-input[contenteditable]:empty::before {
+  content: "Type your quote here";
+  color: rgb(175, 175, 175);
+  pointer-events: none;
+  display: block;
+  /* font-style: italic; */
+  /* border-bottom: 1px solid white; */
+}
+
+#main-author-input[contenteditable]:empty::before {
+  content: "Author, Story here";
+  color: rgb(175, 175, 175);
+  pointer-events: none;
+  display: block;
+  /* font-style: italic; */
+}
+
+#save-quotes-button,
+#cancel-quotes-button {
+  width: 4dvw;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#save-quotes-button:hover,
+#cancel-quotes-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 5px rgba(224, 224, 224, 0.3); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+
+/* Main Focus & To-Do Section */
+#main-focus-todo-container {
+  background-color: hsla(0, 0%, 10%, 50%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  height: 60%;
+  max-height: 80%;
+  text-align: left;
+  margin-top: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  transition: height 0.35s ease;
+}
+
+#logout-button {
+  background: transparent;
+  border: none;
+  color: white;
+  /* width: 30%; */
+  margin-left: auto;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  /* padding: 0; */
+  gap: 1rem;
+}
+
+#logout-icon {
+  height: 1.5rem;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#main-focus-title-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center; /* This is the key property to add */
+}
+
+#main-focus-title {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0 1rem 0 0;
+  margin: 0;
+}
+
+#fold-down-button,
+#fold-up-button {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex; 
+  align-items: center;   
+  margin-left: auto;    
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#focus-button {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  /* font-size: 1.25rem; */
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+#focus-icon {
+  /* color: hsla(0, 0%, 100%, 100%); */
+  /* display: inline; */
+  /* height: 25px; */
+  padding: 0;
+  height: 1.5rem;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* #fold-down-button,
+#fold-up-button {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flexbox;
+  justify-items: flex-end;
+  align-items: flex-end;
+  margin-left: auto;
+  border-radius: 20px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+#fold-down-button:hover,
+#fold-up-button:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 10px rgba(224, 224, 224, 0.3); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#fold-down-icon,
+#fold-up-icon {
+  padding: 0;
+  height: 1.5rem;
+  width: auto;
+  vertical-align: middle;
+}
+
+#main-focus-content {
+  display: block;
+  text-align: left;
+  max-width: 90%;
+}
+
+/* Main To-Do List CSS */
+#main-todo-title-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#main-todo-list-title {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.plus-button {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  /* font-size: 1.25rem; */
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#to-do-icon {
+  /* color: hsla(0, 0%, 100%, 100%); */
+  /* display: inline; */
+  /* height: 25px; */
+  padding: 0;
+  height: 1.5rem;
+  width: auto;
+  vertical-align: middle;
+}
+
+.main-todo-list-children {
+  justify-content: flex-start;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 102%;
+  max-height: 43dvh;
+  overflow-y: auto;
+}
+
+.main-todo-list-children::-webkit-scrollbar {
+  width: 0.25rem;
+  /* margin-left: 0.5rem; */
+}
+
+.main-todo-list-children::-webkit-scrollbar-thumb {
+  background: #444;           /* Color of the scroll thumb */
+  border-radius: 8px;         /* Rounded corners */
+}
+
+.main-todo-list-children::-webkit-scrollbar-track {
+  background: #222;           /* Color of the track */
+  border-radius: 8px;
+}
+
+#todo-list-ul {
+  padding-left: 0;
+}
+
+ul li {
+  padding: 0;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* .check-toggle {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+} */
+
+/* .check-toggle::before {
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 50%;
+  background-image:url('./icons/unchecked.png');
+  background-size: cover;
+  background-position: center;
+} */
+
+/* .check-toggle li.checked {
+  color: white;
+  text-decoration: line-through;
+}
+
+.check-toggle.checked::before {
+  background-image: url('./icons/checked.png');
+} */
+
+/* #main-todo-list-children ul, li {
+  margin-left: 0;
+  padding-left: 0;
+  padding: 0 0 0 100px;
+  list-style-type: none;
+} */
+
+/* Styling for the clickable checkbox */
+.check-toggle {
+  display: inline-block;
+  width: 1.5em;            
+  height: 1.5em;
+  cursor: pointer;
+  vertical-align: text-top;  
+  position: relative;       
+  margin-right: 0.75em;    
+}
+
+/* Styling for the pseudo-element checkmark */
+.check-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;     
+  background-image: url('./icons/unchecked.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.2s ease-in-out; 
+}
+
+li.todo-item.checked .check-toggle::before {
+  background-image: url('./icons/checked.png');
+}
+
+
+li.todo-item.checked .editable-input {
+  text-decoration: line-through;
+  color: #aaa; 
+}
+
+/* Styling for the individual list container */
+.todo-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+.todo-text {
+  /* flex-grow: 1; */
+  display: flex;
+  width: 75%;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 100;
+  padding-left: 2.5rem;
+  flex-wrap: wrap;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+/* input[type=text]{
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+}
+
+input[type=text]:focus {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+} */
+
+/* Styling for the editable input box */
+.editable-input {
+  display: inline-block;
+  /* width: 80%; */
+  max-width: 80%;
+  min-height: 1.25rem;
+  margin-left: 0.25rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  border-radius: 4px;
+  line-height: 1.4;
+  color: white;
+  cursor: text;
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+
+}
+
+.editable-input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+.editable-input[contenteditable]:empty::before {
+  content: "What do you want to do?";
+  color: rgb(175, 175, 175);
+  pointer-events: none;
+  display: block;
+  /* font-style: italic; */
+}
+
+.trash-button {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  /* cursor: pointer; */
+  /* padding-left: 1rem; */
+  padding-right: 0.5rem;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: inline-block;
+  align-items: center;
+  margin-left: auto;
+}
+
+.trash-button #trash-icon {
+  height: 1.25rem;
+  width: auto;
+  position: center;
+}
+
+.todo-item:hover .trash-button {
+  /* display: inline; */
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+  /* transition: 1s ease-in-out; */
+}
+
+#main-todo-shortcut {
+  font-size: 0.75rem;
+  font-weight: 100;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+/* Styling for main-page transitions */
+#main-page {
+  position: relative;
+  overflow: hidden; 
+  /* The initial background-image is already set in your main #main-page rule:
+     background-image: url("./curr_bg/bg5.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#main-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0; 
+             
+  background-image: var(--main-bg-overlay, url("./curr_bg/bg5.png"));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  opacity: 1; 
+  transition: opacity 1s ease-in-out; 
+  pointer-events: none; 
+}
+
+#main-page.fade-out-old::before {
+  opacity: 0; 
+}
